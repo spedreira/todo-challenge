@@ -131,3 +131,31 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,  'static')
+
+
+#Dict config method
+LOGGING = {
+    'version': 1, # Version of logging
+    'disable_existing_loggers': False, #disable logging 
+#############################################################
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'apiviews-info.log',
+        },
+##############################################################
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+##############################################################
+    'loggers': {
+        'todo.views': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG')
+        },
+    },
+}

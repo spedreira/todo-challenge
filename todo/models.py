@@ -1,10 +1,10 @@
 from django.db import models
-from django.utils import timezone
+from django.utils.timezone import now 
 # Create your models here.
 
 class Task(models.Model):
     title = models.CharField(max_length=150)
-    date_posted = models.DateTimeField(default=timezone.now)
+    date_posted = models.DateTimeField(default=now)
     completion = models.BooleanField(blank=True, default=False, null=True)
 
 
