@@ -32,7 +32,7 @@ Instrucciones:
     Ejecutar en la consola (con el entorno activado): python manage.py runserver
 
 
-Para visualizar la página, abrir un navegador y colocar en la barra de navegación: http://127.0.0.1:8000/
+Para visualizar la página, abrir un navegador y colocar en la barra de direcciones: http://127.0.0.1:8000/
 
 https://github.com/spedreira/eon-rad/blob/main/Imagenes/HomeToDo.jpg?raw=true
 
